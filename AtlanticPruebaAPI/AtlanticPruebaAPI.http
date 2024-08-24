@@ -1,0 +1,6 @@
+@AtlanticPruebaAPI_HostAddress = http://localhost:5246
+
+GET {{AtlanticPruebaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
