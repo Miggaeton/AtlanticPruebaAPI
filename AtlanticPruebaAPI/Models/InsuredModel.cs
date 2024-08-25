@@ -33,7 +33,7 @@ namespace AtlanticPruebaAPI.Models
         [Column(TypeName = "money")]
         public decimal Value { get; set; }
 
-        public string? Observations { get; set; }
+        public string Observations { get; set; }
 
 
     }
