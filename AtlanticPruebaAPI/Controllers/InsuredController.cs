@@ -17,8 +17,8 @@ namespace AtlanticPruebaAPI.Controllers
         }
 
         [HttpGet]
-        [Route("GetAllInsured")]
-        public IEnumerable<InsuredModel> GetAllInsured(int? id = null)
+        [Route("GetInsured")]
+        public IEnumerable<InsuredModel> GetInsured(int? id = null)
         {
             if (id.HasValue)
             {
@@ -87,15 +87,11 @@ namespace AtlanticPruebaAPI.Controllers
         [HttpDelete]
         [Route("DeleteInsured/{id:int}")]
         public IActionResult DeleteInsured(int id)
-        {
+        {   
             var insuredToDelete = _context.Insured.Find(id);
-
             if (insuredToDelete == null) { return NotFound(); }
-
             _context.Insured.Remove(insuredToDelete);
-
             _context.SaveChanges();
-
             return Ok(insuredToDelete);
         }
 
